@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { add, remove } from '../redux/Slices/CartSlice';
 import { toast } from 'react-hot-toast';
@@ -39,7 +39,7 @@ const Product = ({post}) => {
     </div>
 
 <div className='h-[180px] '>
-  <img src={post.image} loading='lazy' className='h-full w-full '></img>
+  <img src={post.image} alt='' loading='lazy' className='h-full w-full '></img>
 </div>
 
 <div className='flex justify-between gap-12 items-center w-full mt-5'>
@@ -49,7 +49,7 @@ const Product = ({post}) => {
 </div>
 
 {
-   cart.some((p)=> p.id==post.id) ? 
+   cart.some((p)=> p.id === post.id) ? 
    (<button 
    className="text-gray-700 border-2 border-gray-700 rounded-full font-semibold 
           text-[12px] p-1 px-3 uppercase 
